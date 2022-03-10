@@ -1,9 +1,3 @@
----
-title: git
-created: '2022-03-03T03:59:16.384Z'
-modified: '2022-03-03T04:01:25.391Z'
----
-
 # git
 
 First time setup

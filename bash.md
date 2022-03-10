@@ -1,9 +1,3 @@
----
-title: bash
-created: '2022-03-03T03:57:41.497Z'
-modified: '2022-03-03T04:12:35.023Z'
----
-
 # bash
 
 Loop over lines in a file

@@ -1,9 +1,3 @@
----
-title: slurm
-created: '2022-03-03T03:59:02.017Z'
-modified: '2022-03-03T03:59:06.491Z'
----
-
 # slurm
 
 SLURM
