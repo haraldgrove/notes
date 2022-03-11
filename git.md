@@ -1,30 +1,58 @@
 # git
 
-First time setup
+## First time setup
+
+```bash
 git config --global user.name "haraldgrove"
 git config --global user.email haraldgrove@gmail.com
 git config --global core.editor vim
 git config --global color.ui true
+```
 
-SSH key setup
+## SSH key setup
+
 Checking for existing SSH keys
-$ ls -al ~/.ssh
-# filenames of supported public keys for GitHub are one of the following.
-id_rsa.pub
-id_ecdsa.pub
-id_ed25519.pub
+```bash
+ls -al ~/.ssh
+```
+Filenames of supported public keys for GitHub are one of the following.
+* id_rsa.pub
+* id_ecdsa.pub
+* id_ed25519.pub
+
 Generating a new SSH key
-$ ssh-keygen -t ed25519 -C "haraldgrove@gmail.com"
+```bash
+ssh-keygen -t ed25519 -C "haraldgrove@gmail.com"
+```
+
 Adding your SSH key to the ssh-agent
+```bash
 $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_ed25519
+```
 
 Adding a new SSH key to your GitHub account
+```bash
 $ cat ~/.ssh/id_ed25519.pub
-# Copy the contents of the file and paste it into the section for “new SSH key” on GitHub.
+```
+Copy the contents of the file and paste it into the section for “new SSH key” on GitHub.
 
-BRANCHING
+## BRANCHING
 
 https://www.atlassian.com/git/tutorials/using-branches
 
+```bash
+git branch
+git branch <branch name>
+git checkout <branch name>
 
+git push --set-upstream origin <branch name>
+```
+
+Delete a branch
+
+```bash
+git checkout main
+git branch -d <branch name>
+git push origin --delete <branch name>
+```
