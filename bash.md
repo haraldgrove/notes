@@ -1,14 +1,19 @@
 # bash
 
+## Loops
+
 Loop over lines in a file
+```bash
 SAMPLEFILE=file.txt
 LINES=$(cat $SAMPLEFILE)
 for line in $LINES
 do
         echo $line
 done
+```
 
 Loop over folders starting with “name”, and split the folder name
+```bash
 LINES=$(ls -d -1 name*)
 for line in $LINES
 do
@@ -17,9 +22,8 @@ do
     ID="${ADDR[2]}"
     echo $line
 Done
-
-#! /bin/bash
-
+```
+```bash
 SAMPLES=$1
 
 echo ${SAMPLES}
@@ -35,6 +39,7 @@ do
                 echo "${arr[$i]}"
         done
 Done
+```
 
 ## IF-ELIF-ELSE
 ```bash
@@ -98,4 +103,14 @@ for ELEMENT in 'Hydrogen' 'Helium' 'Lithium' 'Beryllium'; do
 done
 
 echo "$VAR"
+```
+
+## Slice STRING
+
+Split a string in 2 parts: the first N-4 characters and the last 4 characters.
+```bash
+string=$1
+let a=${#string}-4
+first=${string:0:$a}
+second=${string:(-4)}
 ```
