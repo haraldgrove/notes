@@ -49,6 +49,18 @@ git checkout <branch name>
 git push --set-upstream origin <branch name>
 ```
 
+Merge branch into main
+```bash
+git checkout main
+git merge <branch name>
+```
+
+Merge main into branch
+```bash
+git checkout <branch name>
+git merge origin/main
+```
+
 Delete a branch
 
 ```bash
