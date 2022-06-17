@@ -2,6 +2,23 @@
 
 ## Loops
 
+For loop
+```bash
+for i in {1..100}
+do
+ echo $i
+done
+```
+
+While loop
+```bash
+i=1
+while [[ $i -lt 100 ]] ; do
+   echo "$i"
+  (( i += 1 ))
+done
+```
+
 Loop over lines in a file
 ```bash
 SAMPLEFILE=file.txt
