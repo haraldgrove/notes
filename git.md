@@ -41,11 +41,24 @@ Copy the contents of the file and paste it into the section for â€œnew SSH keyâ€
 
 https://www.atlassian.com/git/tutorials/using-branches
 
+List all available branches in the repository
 ```bash
 git branch
-git branch <branch name>
-git checkout <branch name>
+```
 
+Creating a new branch (does not check it out, i.e. focus is still on current branch)
+```bash
+git branch <branch name>
+```
+
+Switch to the new branch (with option -b, also create the branch)
+```bash
+git checkout <branch name>
+git checkout -b <branch name>
+```
+
+Update the remote repository
+```bash
 git push --set-upstream origin <branch name>
 ```
 
