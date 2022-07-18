@@ -30,3 +30,32 @@ Add stderr to stdout and direct to a file
 ```bash
 comman.sh > output.txt 2>&1
 ```
+
+## Replacing text in files
+
+Replace a word in one or more files, can also read from standard input.
+```bash
+sed 's/word1/word2/g' input.file
+```
+
+Replace in-place (-i), add more replacement commands (-e)
+```bash
+sed -i 's/word1/word2/g' input.file
+sed -i -e 's/word1/word2/g' -e 's/xx/yy/g' input.file
+```
+
+Other characters can also be used as separator
+```bash
+## Use + separator instead of / ##
+sed -i 's+regex+new-text+g' file.txt
+```
+
+Replace only when certain conditions are met (e.g. FOO is found on the line)
+```bash
+sed -i -e '/FOO/s/love/sick/' input.txt
+```
+
+Add search parameters: find all occurances (g), ignore case (I)
+```bash
+sed -i 's/word1/word2/gI' input
+```
