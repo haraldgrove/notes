@@ -19,8 +19,13 @@ Output rows where field 40 contains “1”
 $ awk 'BEGIN { FS = "\t" } ; $40 ~ /1/ {print $40}'
 ```
 
+Output the first row and any subsequent rows where field 40 contains "1"
+```bash
+$ awk 'BEGIN {FS = "\t"} ; NR==1 ; $40 ~ /1/ {print $0}'
+```
+
 Output column 40 in row 2 and any row with “1” in column 40 
-```awk
+```bash
 $ awk 'BEGIN { FS = "\t" } ; NR == 2 {print $40} ; $40 ~ /1/ {print $40}'
 ```
 
