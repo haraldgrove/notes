@@ -64,3 +64,12 @@ Add search parameters: find all occurances (g), ignore case (I)
 ```bash
 sed -i 's/word1/word2/gI' input
 ```
+
+## Grep
+
+Regex search for a pattern with known start and stop. The '-P' is for running grep with Perl-based regex. '?' indicates a non-greedy search, i.e. stop at first occurance of stop criteria.
+```
+grep -P -o "SYMBOL=.+?;" 
+grep -P -o "SYMBOL=.+?(?=;)"
+```
+Example: search for entries starting with 'SYMBOL=' and stops at the first ';'. First line includes the ';', the second omit it.
