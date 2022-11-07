@@ -29,6 +29,11 @@ Output column 40 in row 2 and any row with “1” in column 40
 $ awk 'BEGIN { FS = "\t" } ; NR == 2 {print $40} ; $40 ~ /1/ {print $40}'
 ```
 
+Changing the value of column 2, print whole line
+```bash
+$ awk '$2=$2-1' FS='\t' OFS='\t'
+```
+
 ## Command line
 
 Add stderr to stdout and direct to a file
