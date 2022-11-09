@@ -78,3 +78,12 @@ grep -P -o "SYMBOL=.+?;"
 grep -P -o "SYMBOL=.+?(?=;)"
 ```
 Example: search for entries starting with 'SYMBOL=' and stops at the first ';'. First line includes the ';', the second omit it.
+
+## Sort
+
+```bash
+sort chrom.bed                   # chr1,chr10-19,chr2,chr20-22,chr3-9,chrM,chrX,chrY
+sort -V -k1,1 -k2,2 chrom.bed    # chr1-22,chrM,chrX,chrY
+sort -R chrom.bed                # Random order
+sort -n 
+```
