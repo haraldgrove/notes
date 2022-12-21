@@ -19,3 +19,5 @@ sudo gdebi rstudio-server-latest-amd64.deb
 ```bash
 sudo rstudio-server start
 ```
+
+Access your server at http://localhost:8787.
