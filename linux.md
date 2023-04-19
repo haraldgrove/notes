@@ -87,3 +87,10 @@ sort -V -k1,1 -k2,2 chrom.bed    # chr1-22,chrM,chrX,chrY
 sort -R chrom.bed                # Random order
 sort -n 
 ```
+## Prepare environment for first time use
+
+Install GCC (C compiler)
+```bash
+sudo apt update
+sudo apt install build-essential
+```
