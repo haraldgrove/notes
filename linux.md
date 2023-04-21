@@ -93,4 +93,8 @@ Install GCC (C compiler)
 ```bash
 sudo apt update
 sudo apt install build-essential
+sudo apt install zlib1g-dev
+sudo apt install libncurses5-dev
+sudo apt install libbz2-dev
+sudo apt install liblzma-dev
 ```
