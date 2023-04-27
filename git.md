@@ -27,13 +27,13 @@ ssh-keygen -t ed25519 -C "haraldgrove@gmail.com"
 
 Adding your SSH key to the ssh-agent
 ```bash
-$ eval "$(ssh-agent -s)"
-$ ssh-add ~/.ssh/id_ed25519
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
 ```
 
 Adding a new SSH key to your GitHub account
 ```bash
-$ cat ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub
 ```
 Copy the contents of the file and paste it into the section for “new SSH key” on GitHub.
 
