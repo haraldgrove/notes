@@ -99,3 +99,12 @@ sudo apt install libbz2-dev
 sudo apt install liblzma-dev
 sudo apt install libcurl4-openssl-dev
 ```
+
+## Change prompt
+
+Add this to ~/.bashrc to make it permanent
+
+Two line prompt, first line shows current folder, second line shows user and host. With fancy colors (the XXm part).
+```bash
+export PS1="\[\033[34m\][\w]\[\033[0m\]\n\[\033[0;31m\]\u\[\033[0;33m\]@\[\033[36m\]\h\[\033[35m\]-> \[\033[0m\]"
+```
