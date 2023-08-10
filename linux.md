@@ -14,7 +14,7 @@ Set field separator to TAB and print column 40
 $ awk 'BEGIN { FS = "\t" } ; {print $40}'
 ```
 
-Output rows where field 40 contains “1”
+Output column 40 of rows where field 40 contains “1”
 ```bash
 $ awk 'BEGIN { FS = "\t" } ; $40 ~ /1/ {print $40}'
 ```
@@ -24,7 +24,7 @@ Output the first row and any subsequent rows where field 40 contains "1"
 $ awk 'BEGIN {FS = "\t"} ; NR==1 ; $40 ~ /1/ {print $0}'
 ```
 
-Output column 40 in row 2 and any row with “1” in column 40 
+Output column 40 in row 2 and in any row with “1” in column 40 
 ```bash
 $ awk 'BEGIN { FS = "\t" } ; NR == 2 {print $40} ; $40 ~ /1/ {print $40}'
 ```
@@ -32,6 +32,11 @@ $ awk 'BEGIN { FS = "\t" } ; NR == 2 {print $40} ; $40 ~ /1/ {print $40}'
 Changing the value of column 2, print whole line
 ```bash
 $ awk '$2=$2-1' FS='\t' OFS='\t'
+```
+
+Filter on multiple conditions
+```bash
+awk '{if(substr($1,1,1)=="#" && ($15=="996" || $15=="429") && $5>=030000 && $5<=035000) print $0}'
 ```
 
 ## Command line
