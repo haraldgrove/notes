@@ -5,7 +5,12 @@
 find . -name "outTable*" -exec gzip {} \;
 ```
 
-find will execute grep and will substitute {} with the filename(s) found. The difference between ; and + is that with ; a single grep command for each file is executed whereas with + as many files as possible are given as parameters to grep at once.
+find will execute grep and will substitute {} with the filename(s) found. The difference between ; and + is that with ; a single gzip command for each file is executed whereas with + as many files as possible are given as parameters to gzip at once.
+
+Locate all the bam-files and sum the total of all the files.
+```bash
+find . -type f -name "*.bam" -exec du -ch {} + | grep total$
+```
 
 ## AWK
 
