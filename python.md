@@ -9,3 +9,8 @@ gene_name = re.search(r'transcript_id(.*?)[;|\t]',line).group(1)
 print(gene_name)
 ```
 ENST00000602384
+
+Iterate over the given pattern
+```
+[m.start() for m in re.finditer('(?=tt)', 'ttt')]
+```
