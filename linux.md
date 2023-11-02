@@ -44,6 +44,11 @@ Filter on multiple conditions
 awk '{if(substr($1,1,1)=="#" && ($15=="996" || $15=="429") && $5>=030000 && $5<=035000) print $0}'
 ```
 
+Format output with printf
+```bash
+awk '{printf "%10s\t%6d\t%s\t%s\n" , $1, $2, $3, $15}' 
+```
+
 ## Command line
 
 Add stderr to stdout and direct to a file
