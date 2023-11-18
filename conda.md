@@ -7,6 +7,11 @@ conda create -n myenv python=3.8
 ```
 conda remove -n myenv --all
 ```
+# Make environment seen py Jupyter lab
+
+```
+conda install -c anaconda ipykernel
+```
 
 # Example environments
 
