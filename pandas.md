@@ -43,6 +43,7 @@ df['c'] = df[['val','val2']].prod(1).where(df['ctg']=='A', df['val'] / df['val2'
 
 df[['age', 'sex']] = df['age_sex'].str.split('_', n=1, expand=True)
 df['sex'] = df['age_sex'].str.split('_', n=1, expand=True)[1]
+df['age'] = df['age_sex'].str.split('_', n=1, expand=True)[0].astype(int)
 ```
 
 ```
