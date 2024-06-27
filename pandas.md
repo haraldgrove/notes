@@ -55,4 +55,15 @@ def label(row):
 df['a'] = df.apply(label, axis=1)
 ```
 
+## Groupby
+```
+#
+grouped = df.groupby(['Category', 'Subcategory']).sum().reset_index()
+gk = dfld1.groupby('BP_A')['R2'].max()
+```
+
+## Work with VCF
+```
+# Read VCF file, skipping header lines keeping column-headers
+df = pd.read_table(infile, 
 ```
