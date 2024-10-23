@@ -10,7 +10,9 @@ conda remove -n myenv --all
 # Make environment seen py Jupyter lab
 
 ```
+conda activate myenv
 conda install -c anaconda ipykernel
+ipython kernel install --user --name=myenv
 ```
 
 # Example environments
